@@ -16,6 +16,11 @@
             "Clockwork\\Console\\": "src/"
         }
     },
+    "extra": {
+        "zf": {
+            "component": "Clockwork\\Console"
+        }
+    },
     "bin": [
         "bin/console"
     ],
