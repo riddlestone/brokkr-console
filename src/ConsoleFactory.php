@@ -2,10 +2,10 @@
 
 namespace Clockwork\Console;
 
-use Exception;
 use Interop\Container\ContainerInterface;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
+use Throwable;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;
 use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;
@@ -32,18 +32,17 @@ class ConsoleFactory implements FactoryInterface
         $app = new Application();
         foreach ($container->get('Config')['console']['commands'] as $command) {
             try {
-                $command = $container->get($command);
-            } catch (Exception $e) {
+                $commandObject = $container->get($command);
+            } catch (Throwable $e) {
                 throw new ServiceNotCreatedException(sprintf(
-                    'Command "%s" could not be created: %s',
+                    'Command "%s" could not be created',
                     $command,
-                    $e->getMessage()
                 ), 0, $e);
             }
-            if (! $command instanceof Command) {
+            if (! $commandObject instanceof Command) {
                 throw new ServiceNotCreatedException(sprintf('"%s" is not a %s', $command, Command::class));
             }
-            $app->add($container->get($command));
+            $app->add($commandObject);
         }
         return $app;
     }
