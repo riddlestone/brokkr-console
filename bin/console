@@ -1,0 +1,53 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+use Zend\Stdlib\ArrayUtils;
+use Zend\Mvc\Service\ServiceManagerConfig;
+use Zend\ServiceManager\ServiceManager;
+
+if (! defined('APPLICATION_PATH')) {
+    $path = realpath(__DIR__);
+    while ($path !== '/') {
+        if (is_dir($path . '/vendor')) {
+            define('APPLICATION_PATH', $path);
+            break;
+        }
+        $path = realpath(dirname($path));
+    }
+    if (! defined('APPLICATION_PATH')) {
+        fwrite(STDERR,
+            'Could not find application path' . PHP_EOL
+        );
+        exit(1);
+    }
+}
+
+if (is_file($autoload = APPLICATION_PATH . '/vendor/autoload.php')) {
+    require($autoload);
+} else {
+    fwrite(STDERR,
+        'You must set up the project dependencies, run composer install first' . PHP_EOL
+    );
+    exit(1);
+}
+
+$configuration = include APPLICATION_PATH . '/config/application.config.php';
+
+if (file_exists(APPLICATION_PATH . '/config/development.config.php')) {
+    $configuration = ArrayUtils::merge($configuration, include APPLICATION_PATH . '/config/development.config.php');
+}
+
+// Prepare the service manager
+$smConfig = isset($configuration['service_manager']) ? $configuration['service_manager'] : [];
+$smConfig = new ServiceManagerConfig($smConfig);
+
+$serviceManager = new ServiceManager();
+$smConfig->configureServiceManager($serviceManager);
+$serviceManager->setService('ApplicationConfig', $configuration);
+
+// Load modules
+$serviceManager->get('ModuleManager')->loadModules();
+
+$app = $serviceManager->get(Application::class);
+$app->run();
