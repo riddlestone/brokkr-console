@@ -33,6 +33,9 @@
     "bin": [
         "bin/console"
     ],
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
     "license": "BSD-3-Clause",
     "authors": [
         {
