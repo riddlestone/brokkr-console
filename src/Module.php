@@ -1,9 +1,11 @@
 <?php
 
+namespace Riddlestone\ZF\Console;
 
-namespace Clockwork\Console;
-
-
+/**
+ * Class Module
+ * @package Riddlestone\ZF\Console
+ */
 class Module
 {
     public function getConfig()

@@ -8,7 +8,7 @@ Installation of this module uses composer. For composer documentation, please re
 [getcomposer.org](http://getcomposer.org/).
 
 ```sh
-composer require clockwork/console
+composer require riddlestone/zf-console
 ```
 
 ## Usage
@@ -38,4 +38,4 @@ vendor/bin/console my-command
 
 ## Get Involved
 
-File issues at https://github.com/ariddlestone/clockwork-console/issues
+File issues at https://github.com/riddlestone/zf-console/issues

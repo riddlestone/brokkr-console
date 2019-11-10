@@ -1,6 +1,6 @@
 <?php
 
-namespace Clockwork\Console;
+namespace Riddlestone\ZF\Console;
 
 use Interop\Container\ContainerInterface;
 use Symfony\Component\Console\Application;
@@ -12,7 +12,7 @@ use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
  * Class ConsoleFactory
- * @package Console
+ * @package Riddlestone\ZF\Console
  */
 class ConsoleFactory implements FactoryInterface
 {

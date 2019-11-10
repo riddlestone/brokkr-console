@@ -1,8 +1,8 @@
 <?php
 
-namespace Clockwork\Console\Test;
+namespace Riddlestone\ZF\Console\Test;
 
-use Clockwork\Console\ConsoleFactory;
+use Riddlestone\ZF\Console\ConsoleFactory;
 use Interop\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
 use stdClass;

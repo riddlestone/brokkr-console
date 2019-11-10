@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit colors="true" bootstrap="./vendor/autoload.php">
     <testsuites>
-        <testsuite name="Clockwork Console Test Suite">
+        <testsuite name="ZF-Console Test Suite">
             <directory>./test</directory>
         </testsuite>
     </testsuites>

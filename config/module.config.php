@@ -1,6 +1,6 @@
 <?php
 
-namespace Clockwork\Console;
+namespace Riddlestone\ZF\Console;
 
 use Symfony\Component\Console\Application;
 

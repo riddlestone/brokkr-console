@@ -1,8 +1,8 @@
 <?php
 
-namespace Clockwork\Console\Test;
+namespace Riddlestone\ZF\Console\Test;
 
-use Clockwork\Console\Module;
+use Riddlestone\ZF\Console\Module;
 use PHPUnit\Framework\TestCase;
 
 class ModuleTest extends TestCase
