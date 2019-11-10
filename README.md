@@ -1,4 +1,4 @@
-# Clockwork Console
+# Riddlestone ZF-Console
 
 A [Zend Framework 2](https://github.com/zendframework) module for [Symfony Console](https://github.com/symfony/console)
 
