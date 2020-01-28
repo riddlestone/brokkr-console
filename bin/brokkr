@@ -2,9 +2,9 @@
 <?php
 
 use Symfony\Component\Console\Application;
-use Zend\Stdlib\ArrayUtils;
-use Zend\Mvc\Service\ServiceManagerConfig;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\Stdlib\ArrayUtils;
+use Laminas\Mvc\Service\ServiceManagerConfig;
+use Laminas\ServiceManager\ServiceManager;
 
 if (! defined('APPLICATION_PATH')) {
     $path = realpath(__DIR__);

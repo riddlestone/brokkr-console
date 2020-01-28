@@ -1,6 +1,6 @@
-# Riddlestone ZF-Console
+# Riddlestone Brokkr-Console
 
-A [Zend Framework 2](https://github.com/zendframework) module for [Symfony Console](https://github.com/symfony/console)
+A [Laminas](https://github.com/laminas) module for [Symfony Console](https://github.com/symfony/console)
 
 ## Installation
 
@@ -8,7 +8,7 @@ Installation of this module uses composer. For composer documentation, please re
 [getcomposer.org](http://getcomposer.org/).
 
 ```sh
-composer require riddlestone/zf-console
+composer require riddlestone/brokkr-console
 ```
 
 ## Usage
@@ -33,9 +33,9 @@ return [
 
 Your command will now be available in your project:
 ```sh
-vendor/bin/console my-command
+vendor/bin/brokkr my-command
 ```
 
 ## Get Involved
 
-File issues at https://github.com/riddlestone/zf-console/issues
+File issues at https://github.com/riddlestone/brokkr-console/issues

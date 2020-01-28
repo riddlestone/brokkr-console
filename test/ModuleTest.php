@@ -1,8 +1,8 @@
 <?php
 
-namespace Riddlestone\ZF\Console\Test;
+namespace Riddlestone\Brokkr\Console\Test;
 
-use Riddlestone\ZF\Console\Module;
+use Riddlestone\Brokkr\Console\Module;
 use PHPUnit\Framework\TestCase;
 
 class ModuleTest extends TestCase

@@ -1,15 +1,15 @@
 <?php
 
-namespace Riddlestone\ZF\Console\Test;
+namespace Riddlestone\Brokkr\Console\Test;
 
-use Riddlestone\ZF\Console\ConsoleFactory;
+use Riddlestone\Brokkr\Console\ConsoleFactory;
 use Interop\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
-use Zend\ServiceManager\Exception\ServiceNotCreatedException;
-use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
+use Laminas\ServiceManager\Exception\ServiceNotFoundException;
 
 class ConsoleFactoryTest extends TestCase
 {

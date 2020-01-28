@@ -1,18 +1,18 @@
 <?php
 
-namespace Riddlestone\ZF\Console;
+namespace Riddlestone\Brokkr\Console;
 
 use Interop\Container\ContainerInterface;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Throwable;
-use Zend\ServiceManager\Exception\ServiceNotCreatedException;
-use Zend\ServiceManager\Exception\ServiceNotFoundException;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
+use Laminas\ServiceManager\Exception\ServiceNotFoundException;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 /**
  * Class ConsoleFactory
- * @package Riddlestone\ZF\Console
+ * @package Riddlestone\Brokkr\Console
  */
 class ConsoleFactory implements FactoryInterface
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Riddlestone\ZF\Console;
+namespace Riddlestone\Brokkr\Console;
 
 /**
  * Class Module
- * @package Riddlestone\ZF\Console
+ * @package Riddlestone\Brokkr\Console
  */
 class Module
 {
