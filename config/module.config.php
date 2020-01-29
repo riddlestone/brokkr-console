@@ -1,6 +1,6 @@
 <?php
 
-namespace Riddlestone\ZF\Console;
+namespace Riddlestone\Brokkr\Console;
 
 use Symfony\Component\Console\Application;
 
