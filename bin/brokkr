@@ -34,6 +34,10 @@ if (is_file($autoload = APPLICATION_PATH . '/vendor/autoload.php')) {
 
 $configuration = include APPLICATION_PATH . '/config/application.config.php';
 
+if (file_exists(APPLICATION_PATH . '/config/console.config.php')) {
+    $configuration = ArrayUtils::merge($configuration, include APPLICATION_PATH . '/config/console.config.php');
+}
+
 if (file_exists(APPLICATION_PATH . '/config/development.config.php')) {
     $configuration = ArrayUtils::merge($configuration, include APPLICATION_PATH . '/config/development.config.php');
 }
